@@ -1,5 +1,5 @@
 <template>
-  <a-dropdown :trigger="['click']">
+  <a-dropdown class="language-area" placement="bottomCenter">
     <a
       class="ant-dropdown-link"
       @click="e => e.preventDefault()"
@@ -68,11 +68,11 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .dropdown-panel {
-  background: rgba(255, 255, 255, 0.3);
-  margin-top: 10px;
-  /deep/ .ant-dropdown-menu-item-active {
+  margin-top: 0px;
+  ::v-deep(.ant-dropdown-menu-item-active) {
     background: transparent;
     transform: translateX(2px);
+    color: @primary !important;
     transition: all 0.2s ease-in-out;
   }
 }

@@ -14,7 +14,12 @@ import {
   Divider,
   Badge,
   BackTop,
-  Carousel
+  Carousel,
+  Layout,
+  Popover,
+  Popconfirm,
+  Tabs,
+  Empty
 } from 'ant-design-vue'
 
 /**
@@ -24,6 +29,10 @@ import {
  * @returns void
  */
 export default function loadComponent(app: any) {
+  app.use(Empty)
+  app.use(Tabs)
+  app.use(Popconfirm)
+  app.use(Popover)
   app.use(Button)
   app.use(Card)
   app.use(Row)
@@ -40,4 +49,5 @@ export default function loadComponent(app: any) {
   app.use(BackTop)
   app.use(Badge)
   app.use(Carousel)
+  app.use(Layout)
 }

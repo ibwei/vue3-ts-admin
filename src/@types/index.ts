@@ -1,12 +1,12 @@
 import { AppStateType } from '@/store/modules/app/state'
-import { ConsoleStateType } from '@/store/modules/console/state'
+import { UIStateType } from '@/store/modules/ui/state'
 import { UserStateType } from '@/store/modules/user/state'
 
 // vuex state 的模块的类型
 type ModuleType = {
   app: AppStateType
-  console: ConsoleStateType
   user: UserStateType
+  ui: UIStateType
 }
 
 // 所有的StateType

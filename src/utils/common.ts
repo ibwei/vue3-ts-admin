@@ -49,17 +49,6 @@ export const getFormmatName = (user: BasicUserType) => {
   return '团队超级管理员'
 }
 
-// 获取分组名
-export const getGroupName = (key: number): string => {
-  const roleList = store.state.console.roleList
-  for (let i = 0; i < roleList.length; i++) {
-    if (roleList[i].id == key) {
-      return roleList[i].roleName
-    }
-  }
-  return '暂无角色'
-}
-
 /**
  * @description 异步加载  一段js放在 header
  * @param {object} url - js 的 url

@@ -1,30 +1,18 @@
 <template>
   <div class="app-layout">
     <router-view v-if="fullScreenMode" />
-    <div class="app-content" v-else>
-      <app-header />
-      <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/contact">Contact</router-link> |
-        <router-link to="/tests">组件测试</router-link>
-      </div>
-      <router-view />
-      <app-footer />
-    </div>
+    <Main v-else />
   </div>
 </template>
 
 <script>
-import AppFooter from './Footer.vue'
-import AppHeader from './Header.vue'
+import Main from './Main.vue'
 import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 export default defineComponent({
   components: {
-    AppFooter,
-    AppHeader
+    Main
   },
   setup() {
     const fullScreenMode = ref(true)
@@ -42,12 +30,7 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .app-layout {
-  height: 100%;
-}
-.app-content {
-  position: relative;
-  padding: 0;
-  margin: 0;
+  height: 100vh;
 }
 .router-view {
   margin: 0;

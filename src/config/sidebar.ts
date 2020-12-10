@@ -1,8 +1,15 @@
+import {
+  UserOutlined,
+  DashboardOutlined,
+  BorderlessTableOutlined,
+  WifiOutlined,
+  ClusterOutlined
+} from '@ant-design/icons-vue'
 const Sidebar = [
   {
     key: '0',
     title: '系统管理',
-    icon: 'system',
+    icon: ClusterOutlined,
     routePath: '/system',
     children: [
       {
@@ -36,7 +43,7 @@ const Sidebar = [
   {
     key: '1',
     title: '系统监控',
-    icon: 'safe',
+    icon: DashboardOutlined,
     routePath: '/borrow',
     children: [
       {
@@ -59,7 +66,7 @@ const Sidebar = [
   {
     key: '2',
     title: '网关管理',
-    icon: 'dollar',
+    icon: WifiOutlined,
     routePath: '/lend',
     children: [
       {
@@ -88,7 +95,7 @@ const Sidebar = [
         routePath: '/lend/history'
       },
       {
-        key: '2-5',
+        key: '2-6',
         title: '黑名单日志',
         routePath: '/lend/history'
       }
@@ -97,13 +104,13 @@ const Sidebar = [
   {
     key: '3',
     title: '其他模块',
-    icon: 'wallet',
+    icon: BorderlessTableOutlined,
     routePath: '/assets'
   },
   {
     key: '4',
     title: '个人中心',
-    icon: 'user',
+    icon: UserOutlined,
     routePath: '/user',
     children: [
       {
